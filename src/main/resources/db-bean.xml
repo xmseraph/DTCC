@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init">
+	
+	<bean id="dataSource" destroy-method="close"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		p:driverClassName="com.informix.jdbc.IfxDriver" 
+		p:url="jdbc:informix-sqli://db.dev.ps:1540/eqs_prod_mxu1:INFORMIXSERVER=romeodb;IFX_LOCK_MODE_WAIT=5;IFX_AUTOFREE=true" 
+		p:username="eqs" 
+		p:password="eqsdb" 
+    	p:maxActive="5" 
+    	p:poolPreparedStatements="true"
+     	p:maxOpenPreparedStatements="10"/>
+
+</beans>
+

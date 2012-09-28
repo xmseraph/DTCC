@@ -1,0 +1,3 @@
+create table on_off_the_run_index (index_tranche varchar(30),prod_type boolean, on_off boolean, dealer_gross_notional bigint, dealer_contracts int, non_dealer_gross_notional bigint, non_dealer_contracts int, total_gross_notional bigint, total_contracts int)
+
+create table all_index_all_tranche (index_tranche varchar(30),prod_type boolean, gross_notional bigint, net_gross_notional bigint, contracts int)
